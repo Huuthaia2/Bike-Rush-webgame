@@ -3250,17 +3250,21 @@ var __extends = this && this.__extends || function() {
                 t.prototype.onAwake.call(this),
                 
                 this.yad.visible = false;
-                YYGSDK.on(YYG.Event.YYGSDK_INITIALIZED,this,()=>
-                {
-                    platform.getInstance();
+                // YYGSDK.on(YYG.Event.YYGSDK_INITIALIZED,this,()=>
+                // {
+                //     platform.getInstance();
+                //     this.yad.on(Laya.Event.MOUSE_DOWN,this,()=>{platform.getInstance().navigate("LOADING","LOGO")});
+                //     this.yad.visible = true;
+                //     this.loadRes();
+                // });
+                // let o = new YYG.Options();
+                o.gameNameId = "Bike-Rush";
+                o.gamedistributionID = "f01aa4bee50145bf86cda0860af1a497";
+                // YYGSDK.__init__(YYG.ChannelType.YAD,o);
+                platform.getInstance();
                     this.yad.on(Laya.Event.MOUSE_DOWN,this,()=>{platform.getInstance().navigate("LOADING","LOGO")});
                     this.yad.visible = true;
                     this.loadRes();
-                });
-                let o = new YYG.Options();
-                o.gameNameId = "Bike-Rush";
-                o.gamedistributionID = "f01aa4bee50145bf86cda0860af1a497";
-                YYGSDK.__init__(YYG.ChannelType.YAD,o);
 
                
             }, e.prototype.onOpened = function() {
