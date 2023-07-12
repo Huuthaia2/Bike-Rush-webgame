@@ -1644,7 +1644,7 @@
     }(Y), J = function(t) {
         function h(t) {
             this.gameStopHD = !1, this.iconImgTl = null, this._iconImage = null, this._moreBox = null, 
-            this._gameBox = null, this.screenType = 0, this._moreGameDataUrl = "https://abc.layabox.com/public/more/gamelist2.json", 
+            this._gameBox = null, this.screenType = 0, this._moreGameDataUrl = "../../../abc.layabox.com/public/more/gamelist2.json", 
             this._iconImageObj = null, this.clickCallBack = null, this.closeCallBack = null, 
             this.isShow = !1, this.dinfo = null, this.ErrorUrlHttps = "https://elastic.layabox.com/", 
             this.tongjiType = "bdm", void 0 === t && (t = 0), h.__super.call(this), this.screenType = t, 
@@ -3067,7 +3067,7 @@
         }), i;
     }(V), at = (function(t) {
         function i(t) {
-            this.advsListArr = [], this.resUrl = "https://unioncdn.layabox.com/config/iconlist.json", 
+            this.advsListArr = [], this.resUrl = "../../../unioncdn.layabox.com/config/iconlist.json", 
             this._data = [], this._resquestTime = 36e4, this._appid = null, this._playIndex = 0, 
             this._lunboTime = 5e3, i.__super.call(this), this._http = new r.window.XMLHttpRequest(), 
             this.skin = t, this.setLoadUrl(), this.init(), this.size(120, 120);
@@ -3075,7 +3075,7 @@
         n(i, "laya.ui.AdvImage", t);
         var s = i.prototype;
         return s.setLoadUrl = function() {
-            r.onLimixiu && (this.resUrl = "https://abc.layabox.com/public/wyw/gconfig.json");
+            r.onLimixiu && (this.resUrl = "../../../abc.layabox.com/public/wyw/gconfig.json");
         }, s.init = function() {
             this.isSupportJump() ? ((r.onMiniGame || r.onBDMiniGame) && e.timer.loop(this._resquestTime, this, this.onGetAdvsListData), 
             this.onGetAdvsListData(), this.initEvent()) : this.visible = !1;
