@@ -3249,7 +3249,12 @@ var __extends = this && this.__extends || function() {
             return __extends(e, t), e.prototype.onAwake = function() {
                 t.prototype.onAwake.call(this),
                 
-                this.yad.visible = false;
+                platform.getInstance();
+                    this.yad.on(Laya.Event.MOUSE_DOWN,this,()=>{platform.getInstance().navigate("LOADING","LOGO")});
+                    this.yad.visible = true;
+                    this.loadRes();
+                
+                // this.yad.visible = false;
                 // YYGSDK.on(YYG.Event.YYGSDK_INITIALIZED,this,()=>
                 // {
                 //     platform.getInstance();
@@ -3258,13 +3263,9 @@ var __extends = this && this.__extends || function() {
                 //     this.loadRes();
                 // });
                 // let o = new YYG.Options();
-                o.gameNameId = "Bike-Rush";
-                o.gamedistributionID = "f01aa4bee50145bf86cda0860af1a497";
+                // o.gameNameId = "Bike-Rush";
+                // o.gamedistributionID = "f01aa4bee50145bf86cda0860af1a497";
                 // YYGSDK.__init__(YYG.ChannelType.YAD,o);
-                platform.getInstance();
-                    this.yad.on(Laya.Event.MOUSE_DOWN,this,()=>{platform.getInstance().navigate("LOADING","LOGO")});
-                    this.yad.visible = true;
-                    this.loadRes();
 
                
             }, e.prototype.onOpened = function() {
